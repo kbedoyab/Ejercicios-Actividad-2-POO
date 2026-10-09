@@ -1,0 +1,30 @@
+@startuml
+class Circulo {
+  - radio : float
+  + __init__(radio)
+  + calcular_area() : float
+  + calcular_perimetro() : float
+}
+class Rectangulo {
+  - base : float
+  - altura : float
+  + __init__(base, altura)
+  + calcular_area() : float
+  + calcular_perimetro() : float
+}
+class Cuadrado {
+  - lado : float
+  + __init__(lado)
+  + calcular_area() : float
+  + calcular_perimetro() : float
+}
+class TrianguloRectangulo {
+  - base : float
+  - altura : float
+  + __init__(base, altura)
+  + calcular_hipotenusa() : float
+  + calcular_area() : float
+  + calcular_perimetro() : float
+  + determinar_tipo() : str
+}
+@enduml

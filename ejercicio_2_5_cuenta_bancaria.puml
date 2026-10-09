@@ -1,0 +1,21 @@
+@startuml
+class CuentaBancaria {
+  - nombres_titular : str
+  - apellidos_titular : str
+  - numero_cuenta : int
+  - tipo_cuenta : TipoCuenta
+  - saldo : float
+  + __init__(nombres_titular, apellidos_titular, numero_cuenta, tipo_cuenta)
+  + imprimir() : None
+  + consultar_saldo() : None
+  + consignar(valor) : bool
+  + retirar(valor) : bool
+}
+
+enum TipoCuenta {
+  AHORROS
+  CORRIENTE
+}
+
+CuentaBancaria --> TipoCuenta
+@enduml

@@ -1,0 +1,70 @@
+@startuml
+class Automovil {
+  - marca : str
+  - modelo : int
+  - motor : int
+  - tipo_combustible : TipoCombustible
+  - tipo_automovil : TipoAutomovil
+  - numero_puertas : int
+  - cantidad_asientos : int
+  - velocidad_maxima : int
+  - color : TipoColor
+  - velocidad_actual : int
+  + __init__(...)
+  + get_marca() : str
+  + get_modelo() : int
+  + get_motor() : int
+  + get_tipo_combustible() : TipoCombustible
+  + get_tipo_automovil() : TipoAutomovil
+  + get_numero_puertas() : int
+  + get_cantidad_asientos() : int
+  + get_velocidad_maxima() : int
+  + get_color() : TipoColor
+  + get_velocidad_actual() : int
+  + set_marca(marca) : None
+  + set_modelo(modelo) : None
+  + set_motor(motor) : None
+  + set_tipo_combustible(tipo) : None
+  + set_tipo_automovil(tipo) : None
+  + set_numero_puertas(n) : None
+  + set_cantidad_asientos(n) : None
+  + set_velocidad_maxima(v) : None
+  + set_color(color) : None
+  + set_velocidad_actual(v) : None
+  + acelerar(incremento) : None
+  + desacelerar(decremento) : None
+  + frenar() : None
+  + calcular_tiempo_llegada(distancia) : float
+  + imprimir() : None
+}
+
+enum TipoCombustible {
+  GASOLINA
+  BIOETANOL
+  DIESEL
+  BIODIESEL
+  GAS_NATURAL
+}
+enum TipoAutomovil {
+  CIUDAD
+  SUBCOMPACTO
+  COMPACTO
+  FAMILIAR
+  EJECUTIVO
+  SUV
+}
+enum TipoColor {
+  BLANCO
+  NEGRO
+  ROJO
+  NARANJA
+  AMARILLO
+  VERDE
+  AZUL
+  VIOLETA
+}
+
+Automovil --> TipoCombustible
+Automovil --> TipoAutomovil
+Automovil --> TipoColor
+@enduml

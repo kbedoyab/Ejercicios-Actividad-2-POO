@@ -1,0 +1,24 @@
+@startuml
+class Planeta {
+  - nombre : str
+  - cantidad_satelites : int
+  - masa : float
+  - volumen : float
+  - diametro : int
+  - distancia_sol : int
+  - tipo : TipoPlaneta
+  - es_observable : bool
+  + __init__(...)
+  + imprimir() : None
+  + calcular_densidad() : float
+  + es_planeta_exterior() : bool
+}
+
+enum TipoPlaneta {
+  GASEOSO
+  TERRESTRE
+  ENANO
+}
+
+Planeta --> TipoPlaneta
+@enduml

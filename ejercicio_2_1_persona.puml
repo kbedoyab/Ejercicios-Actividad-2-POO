@@ -1,0 +1,10 @@
+@startuml
+class Persona {
+  - nombre : str
+  - apellidos : str
+  - numero_documento_identidad : str
+  - anio_nacimiento : int
+  + __init__(nombre, apellidos, numero_documento_identidad, anio_nacimiento)
+  + imprimir() : None
+}
+@enduml
